@@ -18,6 +18,6 @@ public class BottlesTest {
         final String actual = new String(stream.toByteArray());
         final String expected = new String(Files.readAllBytes(Paths.get("src/main/resources/test.txt")));
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
 }
