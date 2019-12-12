@@ -6,7 +6,6 @@ class Bottles {
     }
 
     public static void writeLyrics(PrintStream out) {
-        String s = "s";
         for (int beers = 99; beers > -1; beers--) {
 
 
@@ -28,13 +27,11 @@ class Bottles {
                     out.print(beers + " bottles" + " of beer on the wall,");
                     out.println(beers + " bottles"  + " of beer,");
                     out.print("Take one down, pass it around,");
-                    s = "";
                     out.println(beers - 1 + " bottle"  + " of beer on the wall.\r\n");
                 } else {
                     out.print(beers + " bottles" + " of beer on the wall,");
                     out.println(beers + " bottles"  + " of beer,");
                     out.print("Take one down, pass it around,");
-                    s = "s";
                     out.println(beers - 1 + " bottles" + " of beer on the wall.\r\n");
                 }
             }
