@@ -13,26 +13,30 @@ class Bottles {
                 out.print(beers + actionBottle(beers) + " of beer on the wall,");
                 out.println(beers + actionBottle(beers) + " of beer,");
                 out.print(actionAfterBeer(beers));
-                out.println("99" + actionBottle(beers -1)+ " of beer on the wall.\r\n");
+                out.println(beerLeft(beers) + actionBottle(beerLeft(beers)) + " of beer on the wall.\r\n");
             } else if (beers == 1) {
                 out.print(beers + actionBottle(beers) + " of beer on the wall,");
                 out.println(beers + actionBottle(beers) + " of beer,");
                 out.print(actionAfterBeer(beers));
-                out.println(beers - 1 + actionBottle(beers -1) + " of beer on the wall.\r\n");
+                out.println(beerLeft(beers) + actionBottle(beerLeft(beers)) + " of beer on the wall.\r\n");
             } else if (beers == 2) {
                 out.print(beers + actionBottle(beers) + " of beer on the wall,");
                 out.println(beers + actionBottle(beers) + " of beer,");
                 out.print(actionAfterBeer(beers));
-                out.println(beers - 1 + actionBottle(beers -1) + " of beer on the wall.\r\n");
+                out.println(beerLeft(beers) + actionBottle(beerLeft(beers)) + " of beer on the wall.\r\n");
             } else {
                 out.print(beers + actionBottle(beers) + " of beer on the wall,");
                 out.println(beers + actionBottle(beers) + " of beer,");
                 out.print(actionAfterBeer(beers));
-                out.println(beers - 1 + actionBottle(beers -1) + " of beer on the wall.\r\n");
+                out.println(beerLeft(beers) + actionBottle(beerLeft(beers)) + " of beer on the wall.\r\n");
             }
         }
 
 
+    }
+
+    public static int beerLeft(int beers) {
+        return (beers == 0) ? 99 : (beers - 1);
     }
 
     public static String actionAfterBeer(int beers) {
@@ -42,4 +46,6 @@ class Bottles {
     public static String actionBottle(int beers) {
         return (beers == 1) ? " bottle" : " bottles";
     }
+
+
 }
