@@ -7,11 +7,10 @@ class Bottles {
 
     public static void writeLyrics(PrintStream out) {
         for (int beers = 99; beers > -1; beers--) {
-
-            out.print(beers + actionBottle(beers) + " of beer on the wall,");
-            out.println(beers + actionBottle(beers) + " of beer,");
+            out.print(bottle(beers) + " of beer on the wall,");
+            out.println(bottle(beers) + " of beer,");
             out.print(actionAfterBeer(beers));
-            out.println(beerLeft(beers) + actionBottle(beerLeft(beers)) + " of beer on the wall.\r\n");
+            out.println(bottle(beerLeft(beers)) + " of beer on the wall.\r\n");
         }
     }
 
@@ -28,5 +27,9 @@ class Bottles {
         return (beers == 1) ? " bottle" : " bottles";
     }
 
+    public static String  bottle(int beers){
+        return beers + actionBottle(beers);
+
+    }
 
 }
